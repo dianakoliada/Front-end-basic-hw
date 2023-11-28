@@ -1,0 +1,108 @@
+body {
+    font-family: 'Roboto Slab', serif, 'Roboto', sans-serif; /*подключила шрифт*/
+}
+
+.header {
+    background-color: white; /*задала фон хедеру*/
+    width: 100%; /*ширина для позиционирования*/
+    box-shadow: 0 8px 6px -6px rgba(0, 0, 0, .3); /*тень*/
+    position: fixed; /*зафиксировала хедер*/
+    display: flex; /*меню в ряд*/
+    justify-content: center; /*меню по центру*/
+    padding: 2%; /*внутренний отступ*/
+    z-index: 2; /*чтоб аудио не перекрывала хедер при прокрутке*/
+}
+
+.nav {
+    width: 60%; /*задала ширину блоку с меню*/
+}
+
+.nav_menu {
+    display: flex; /*меню в ряд*/
+    justify-content: space-between; /*расстояние между айтемами*/
+    font-size: 2rem; /*размер шрифта*/
+}
+
+.nav_title {
+    text-decoration: none; /*убрала нижнее подчеркивание у меню*/
+    color: black; /*цвет шрифта*/
+    font-weight: bold; /*жирность шрифта*/
+    transition: all 1s; /*плавный переход*/
+}
+
+.nav_title:hover {
+    cursor: pointer; /*при наведении мышки курсор становится пальчиком*/
+    color: grey; /*при наведении мышки цвет шрифта меняется*/
+    transition: all 1s; /*плавный переход*/
+}
+
+.wrapper {
+    padding-top: 5%; /*верхний внутренний отступ*/
+    display: flex; /*для флексичности*/
+    flex-direction: column; /*располагаю все элементы в колонку*/
+    align-items: center; /*располагаю все элементы по центру*/
+}
+
+.main_title {
+    display: block; /*делаю элемент блочным*/
+    padding: 1%; /*внутренний отступ*/
+    font-weight: bold; /*жирность шрифта*/
+    text-align: center; /*располагаю текст по середине*/
+    font-size: 3rem; /*размер шрифта*/
+}
+
+#pic {
+    box-shadow: 2px 2px 2px 4px rgba(0, 0, 0, 0.3); /*оттенняю картинку*/
+    transform: scale(1); /*для возврата размера по умолчанию*/
+    transition: all 2s; /*плавный переход*/
+}
+
+#pic:hover {
+    cursor: pointer; /*при наведении мышки курсор становится пальчиком*/
+    transform: scale(0.8); /*при наведении мышки картинка уменьшается*/
+    transition: all 2s; /*плавный переход*/
+}
+
+.audio_item {
+    padding: 3%; /*внутренний отступ для рассоединения аудио и названий песен*/
+    z-index: 1; /*чтоб аудио не перекрывала хедер при прокрутке*/
+}
+
+h3 {
+    display: block; /*делаю элемент блочным*/
+    padding: 1.8%; /*внутренний отступ*/
+    font-size: 1.5rem; /*размер шрифта*/
+}
+
+audio {
+    transform: scale(1); /*для возврата размера по умолчанию*/
+    transition: all 2s; /*плавный переход*/
+}
+
+audio:hover {
+    transform: scale(1.2); /*при наведении мышки блочек с аудио увеличивается*/
+    transition: all 2s; /*плавный переход*/
+}
+
+.container_video {
+    margin-top: 2%; /*внешний отступ*/
+    width: 62%; /*ширина блока*/
+}
+
+iframe {
+    width: 100%; /*увеличиваю ширину видео*/
+    height: 60vh; /*увеличиваю высоту видео*/
+}
+
+.footer {
+    margin-top: 2%; /*внешний верхний отступ*/
+    box-shadow: 0 0 8px 8px rgba(0, 0, 0, .5); /*оттеняю футер*/
+}
+
+.footer_item {
+    display: block; /*делаю строчный элемент блочным*/
+    text-align: center; /*размещаю текст посредине*/
+    font-size: 1.5rem; /*задаю размер шрифта текста*/
+    padding-bottom: 1%; /*задаю внутренний отступ*/
+}
+

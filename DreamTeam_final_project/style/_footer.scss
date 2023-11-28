@@ -1,0 +1,639 @@
+@import "tools";
+@import "reset";
+
+@media screen and (min-width: 378px) and (max-width: 567px) {
+    .footer {
+        @include setPadding(30px 0 30px);
+    
+        .container {
+            margin: 0 auto;
+    
+            .footer__contacts {
+    
+                .footer__title {
+                    font-size: $titleFontSize;
+                    color: $secondaryColor;
+                    text-transform: uppercase;
+                    font-family: $fontSemibold;
+                    text-align: center;
+                    @include position(relative);
+                    @include setMargin(20px 0 50px 0);
+                    @include setPadding(0);
+                    
+                        .unique {
+                             color: $primaryColor;
+                        }
+                    }
+        
+                .footer__title:after {
+                    content: "CONTACTS";
+                    font-family: $fontBold;
+                    font-size: 3.5rem;
+                    @include position(absolute);
+                    @include way(-12px, 0, 0, 0);
+                    opacity: 0.1;
+                }       
+            }
+            
+            .footer__block {
+    
+                .footer__list {
+                    @include setFlex(flex, column, flex-start, flex-start);
+                    display: none;
+    
+                    .footer__element {
+                        @include setMargin(0 0 32px 0);
+    
+                        .footer__link {
+                            color: $secondaryColor;
+                            font-size: $textFontSize;
+                            transition: 0.8s ease-out;
+    
+                            &:hover {
+                                color: $primaryColor;
+                            }
+                        }
+                    }
+                }
+    
+                .footer__form {
+    
+                    .form__label {
+                        font-size: $textFontSize;
+                        color: $primaryColor;
+                        text-align: center;
+                        font-family: $fontRegular;
+                        line-height: 1.5;
+                        @include setMargin(0 0 20px);
+                    }
+    
+                    .form__input {
+                        display: block;
+                        width: $sizePercent;
+                        @include setMargin(0 0 15px 0);
+                        @include setPadding(15px 20px);
+                        @include borderR(30px);
+                        background-color: $mainColor;
+                        @include Bor(0);
+                        outline: none;
+                        box-shadow: inset 0px 2px 5px 0px rgba(0,0,0,0.79);
+                        color: $secondaryColor;
+                    }
+    
+                    .button {
+                        display: block;
+                        width: $sizePercent;
+                        @include setMargin(0 0 15px 0);
+                        @include setPadding(22px 20px);
+                        @include borderR(30px);
+                        background-color: $primaryColor;
+                        @include Bor(0);
+                        outline: none;
+                        box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.79);
+                        color: $secondaryColor;
+                        text-transform: uppercase;
+                        font-family: $fontBold;
+                        transition: 0.5s ease-out;
+    
+                        &:hover {
+                            transform: scale(1.1);
+                        }
+                    }
+                }
+            }
+    
+            .footer__sign {
+                text-align: center;
+    
+                .footer__text {
+                    @include setMargin(30px 0 0);
+                    font-size: $textFontSize/1.2;
+                    color: $specialyColor;
+                }
+            }
+        }
+
+        .footer__fix {
+            display: none;
+        }
+    }
+}
+
+@media screen and (min-width: 576px) and (max-width: 767px) {
+    .footer {
+        @include setPadding(50px 0 30px);
+    
+        .container {
+            margin: 0 auto;
+            padding: 0;
+    
+            .footer__contacts {
+    
+                .footer__title {
+                    font-size: $titleFontSize;
+                    color: $secondaryColor;
+                    text-transform: uppercase;
+                    font-family: $fontSemibold;
+                    text-align: center;
+                    @include position(relative);
+                    @include setMargin(50px 0 100px 0);
+                    @include setPadding(0);
+                    
+                        .unique {
+                             color: $primaryColor;
+                        }
+                    }
+        
+                .footer__title:after {
+                    content: "CONTACTS";
+                    font-family: $fontBold;
+                    font-size: 4rem;
+                    @include position(absolute);
+                    @include way(-15px, 0, 0, 0);
+                    opacity: 0.1;
+                }       
+            }
+            
+            .footer__block {
+    
+                .footer__list {
+                    @include setFlex(flex, column, flex-start, flex-start);
+                    display: none;
+    
+                    .footer__element {
+                        @include setMargin(0 0 32px 0);
+    
+                        .footer__link {
+                            color: $secondaryColor;
+                            font-size: $textFontSize;
+                            transition: 0.8s ease-out;
+    
+                            &:hover {
+                                color: $primaryColor;
+                            }
+                        }
+                    }
+                }
+    
+                .footer__form {
+    
+                    .form__label {
+                        font-size: $textFontSize;
+                        color: $primaryColor;
+                        text-align: center;
+                        font-family: $fontRegular;
+                        line-height: 1.5;
+                        @include setMargin(0 0 20px);
+                    }
+    
+                    .form__input {
+                        display: block;
+                        width: $sizePercent;
+                        @include setMargin(0 0 15px 0);
+                        @include setPadding(15px 20px);
+                        @include borderR(30px);
+                        background-color: $mainColor;
+                        @include Bor(0);
+                        outline: none;
+                        box-shadow: inset 0px 2px 5px 0px rgba(0,0,0,0.79);
+                        color: $secondaryColor;
+                    }
+    
+                    .button {
+                        display: block;
+                        width: $sizePercent;
+                        @include setMargin(0 0 15px 0);
+                        @include setPadding(22px 20px);
+                        @include borderR(30px);
+                        background-color: $primaryColor;
+                        @include Bor(0);
+                        outline: none;
+                        box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.79);
+                        color: $secondaryColor;
+                        text-transform: uppercase;
+                        font-family: $fontBold;
+                        transition: 0.5s ease-out;
+    
+                        &:hover {
+                            transform: scale(1.1);
+                        }
+                    }
+                }
+            }
+    
+            .footer__sign {
+                text-align: center;
+    
+                .footer__text {
+                    @include setMargin(30px 0 0);
+                    font-size: $textFontSize/1.2;
+                    color: $specialyColor;
+                }
+            }
+        }
+
+        .footer__fix {
+            display: none;
+        }
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 991px) {
+    .footer {
+        @include setPadding(50px 0 30px);
+    
+        .container {
+            margin: 0 auto;
+            padding: 0;
+    
+            .footer__contacts {
+    
+                .footer__title {
+                    font-size: $titleFontSize;
+                    color: $secondaryColor;
+                    text-transform: uppercase;
+                    font-family: $fontSemibold;
+                    text-align: center;
+                    @include position(relative);
+                    @include setMargin(50px 0 100px 0);
+                    @include setPadding(0);
+        
+                        .unique {
+                             color: $primaryColor;
+                        }
+                    }
+        
+                .footer__title:after {
+                    content: "CONTACTS";
+                    font-family: $fontBold;
+                    font-size: 5rem;
+                    @include position(absolute);
+                    @include way(-30px, 0, 0, 0);
+                    opacity: 0.1;
+                }       
+            }
+            
+            .footer__block {
+    
+                .footer__list {
+                    @include setFlex(flex, column, flex-start, flex-start);
+                    display: none;
+    
+                    .footer__element {
+                        @include setMargin(0 0 32px 0);
+    
+                        .footer__link {
+                            color: $secondaryColor;
+                            font-size: $textFontSize;
+                            transition: 0.8s ease-out;
+    
+                            &:hover {
+                                color: $primaryColor;
+                            }
+                        }
+                    }
+                }
+    
+                .footer__form {
+                    @include setMargin(0 auto);
+    
+                    .form__label {
+                        font-size: $textFontSize;
+                        color: $primaryColor;
+                        text-align: center;
+                        font-family: $fontRegular;
+                        line-height: 1.5;
+                        @include setMargin(0 0 20px);
+                    }
+    
+                    .form__input {
+                        display: block;
+                        width: $sizePercent;
+                        @include setMargin(0 0 15px 0);
+                        @include setPadding(15px 20px);
+                        @include borderR(30px);
+                        background-color: $mainColor;
+                        @include Bor(0);
+                        outline: none;
+                        box-shadow: inset 0px 2px 5px 0px rgba(0,0,0,0.79);
+                        color: $secondaryColor;
+                    }
+    
+                    .button {
+                        display: block;
+                        width: $sizePercent;
+                        @include setMargin(0 0 15px 0);
+                        @include setPadding(22px 20px);
+                        @include borderR(30px);
+                        background-color: $primaryColor;
+                        @include Bor(0);
+                        outline: none;
+                        box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.79);
+                        color: $secondaryColor;
+                        text-transform: uppercase;
+                        font-family: $fontBold;
+                        transition: 0.5s ease-out;
+    
+                        &:hover {
+                            transform: scale(1.1);
+                        }
+                    }
+                }
+            }
+    
+            .footer__sign {
+                text-align: center;
+    
+                .footer__text {
+                    @include setMargin(30px 0 0);
+                    font-size: $textFontSize/1.2;
+                    color: $specialyColor;
+                }
+            }
+        }
+
+        .footer__fix {
+            display: none;
+        }
+    }
+}
+
+@media screen and (min-width: 992px) and (max-width: 1399px) {
+    .footer {
+        @include setPadding(50px 0 30px);
+    
+        .container {
+            margin: 0 auto;
+            padding: 0;
+    
+            .footer__contacts {
+    
+                .footer__title {
+                    font-size: $titleFontSize;
+                    color: $secondaryColor;
+                    text-transform: uppercase;
+                    font-family: $fontSemibold;
+                    text-align: center;
+                    @include position(relative);
+                    @include setMargin(50px 0 100px 0);
+                    @include setPadding(0);
+        
+                        .unique {
+                             color: $primaryColor;
+                        }
+                    }
+        
+                .footer__title:after {
+                    content: "CONTACTS";
+                    font-family: $fontBold;
+                    font-size: 5rem;
+                    @include position(absolute);
+                    @include way(-30px, 0, 0, 0);
+                    opacity: 0.1;
+                }       
+            }
+            
+            .footer__block {
+    
+                .footer__list {
+                    @include setFlex(flex, column, flex-start, flex-start);
+                    display: none;
+    
+                    .footer__element {
+                        @include setMargin(0 0 32px 0);
+    
+                        .footer__link {
+                            color: $secondaryColor;
+                            font-size: $textFontSize;
+                            transition: 0.8s ease-out;
+    
+                            &:hover {
+                                color: $primaryColor;
+                            }
+                        }
+                    }
+                }
+    
+                .footer__form {
+                    @include setMargin(0 auto);
+    
+                    .form__label {
+                        font-size: $textFontSize*1.4;
+                        color: $primaryColor;
+                        font-family: $fontRegular;
+                        line-height: 1.5;
+                        @include setMargin(0 auto 20px);
+                        text-align: center;
+                    }
+    
+                    .form__input {
+                        display: block;
+                        width: $sizePercent;
+                        @include setMargin(0 0 15px 0);
+                        @include setPadding(15px 20px);
+                        @include borderR(30px);
+                        background-color: $mainColor;
+                        @include Bor(0);
+                        outline: none;
+                        box-shadow: inset 0px 2px 5px 0px rgba(0,0,0,0.79);
+                        color: $secondaryColor;
+                    }
+    
+                    .button {
+                        display: block;
+                        width: $sizePercent;
+                        @include setMargin(0 0 15px 0);
+                        @include setPadding(22px 20px);
+                        @include borderR(30px);
+                        background-color: $primaryColor;
+                        @include Bor(0);
+                        outline: none;
+                        box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.79);
+                        color: $secondaryColor;
+                        text-transform: uppercase;
+                        font-family: $fontBold;
+                        transition: 0.5s ease-out;
+    
+                        &:hover {
+                            transform: scale(1.1);
+                        }
+                    }
+                }
+            }
+    
+            .footer__sign {
+                text-align: center;
+    
+                .footer__text {
+                    @include setMargin(30px 0 0);
+                    font-size: $textFontSize/1.2;
+                    color: $specialyColor;
+                }
+            }
+        }
+
+        .footer__fix {
+            display: none;
+        }
+    }
+}
+
+@media screen and (min-width: 1400px) and (max-width: 1920px) {
+    .footer {
+        @include setPadding(50px 0 30px);
+    
+        .container {
+            margin: 0 auto;
+            padding: 0;
+    
+            .footer__contacts {
+    
+                .footer__title {
+                    font-size: $titleFontSize;
+                    color: $secondaryColor;
+                    text-transform: uppercase;
+                    font-family: $fontSemibold;
+                    text-align: center;
+                    @include position(relative);
+                    @include setMargin(50px 0 100px 0);
+                    @include setPadding(0);
+        
+                        .unique {
+                             color: $primaryColor;
+                        }
+                    }
+        
+                .footer__title:after {
+                    content: "CONTACTS";
+                    font-family: $fontBold;
+                    font-size: 5rem;
+                    @include position(absolute);
+                    @include way(-30px, 0, 0, 0);
+                    opacity: 0.1;
+                }       
+            }
+            
+            .footer__block {
+    
+                .footer__list {
+                    @include setFlex(flex, column, flex-start, flex-start);
+    
+                    .footer__element {
+                        @include setMargin(0 0 32px 0);
+    
+                        .footer__link {
+                            color: $secondaryColor;
+                            font-size: $textFontSize;
+                            transition: 0.8s ease-out;
+    
+                            &:hover {
+                                color: $primaryColor;
+                            }
+                        }
+                    }
+                }
+    
+                .footer__form {
+    
+                    .form__label {
+                        font-size: $textFontSize;
+                        color: $primaryColor;
+                        text-align: center;
+                        font-family: $fontRegular;
+                        line-height: 1.5;
+                        @include setMargin(0 0 20px);
+                    }
+    
+                    .form__input {
+                        display: block;
+                        width: $sizePercent;
+                        @include setMargin(0 0 15px 0);
+                        @include setPadding(15px 20px);
+                        @include borderR(30px);
+                        background-color: $mainColor;
+                        @include Bor(0);
+                        outline: none;
+                        box-shadow: inset 0px 2px 5px 0px rgba(0,0,0,0.79);
+                        color: $secondaryColor;
+                    }
+    
+                    .button {
+                        display: block;
+                        width: $sizePercent;
+                        @include setMargin(0 0 15px 0);
+                        @include setPadding(22px 20px);
+                        @include borderR(30px);
+                        background-color: $primaryColor;
+                        @include Bor(0);
+                        outline: none;
+                        box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.79);
+                        color: $secondaryColor;
+                        text-transform: uppercase;
+                        font-family: $fontBold;
+                        transition: 0.5s ease-out;
+    
+                        &:hover {
+                            transform: scale(1.1);
+                        }
+                    }
+                }
+            }
+    
+            .footer__sign {
+                text-align: center;
+    
+                .footer__text {
+                    @include setMargin(30px 0 0);
+                    font-size: $textFontSize/1.2;
+                    color: $specialyColor;
+                }
+            }
+        }
+
+        .footer__fix {
+            width: $size + px;
+            height: $size + px;
+            background-color: $primaryColor;
+            box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.79);
+            @include borderR(50px);
+            @include setFlex(flex, row, center, center);
+            @include position(fixed);
+            @include way(80%, 0, 0, 70px);
+            animation-name: slide;
+            animation-timing-function: ease;
+            animation-duration: 6s;
+            animation-iteration-count: infinite;
+
+            @keyframes slide {
+                0%  {
+                    transform: scale(0, 0) translateY(0);
+                }
+                
+                15%, 70% {
+                    transform: scale(1, 1) translateY(0);
+                }
+                
+                90% {
+                    transform: scale(1, 1) translateY(600%);
+                }
+                
+                100% {
+                    transform: scale(1, 1) translateY(600%);
+                }
+            }
+
+            .fix__link {
+                transition: 0.8s ease-out;
+
+                &:hover {
+                    transform: scale(1.2) rotate(360deg);
+                }
+
+                .fa-solid {
+                    font-size: $titleFontSize*1.5;
+                    color: $secondaryColor;
+                }
+            }
+        }
+    }
+}

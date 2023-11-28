@@ -1,0 +1,64 @@
+$sizePercent: 100%;
+$size: 100; 
+$mainColor: #212529; 
+$primaryColor: #FFC107; 
+$secondaryColor: #fff; 
+$specialyColor: rgb(161, 161, 161); 
+$titleFontSize: 2rem;
+$textFontSize: 1rem;
+$fontRegular: Closer;
+$fontSemibold: Closer;
+$fontBold: "Closer SemBd";
+
+
+@mixin setFlex ($dispFlex, $flexDir, $jusCon, $alItem) {
+    display: $dispFlex;
+    flex-direction: $flexDir;
+    justify-content: $jusCon;
+    align-items: $alItem;
+}
+
+@mixin setMargin ($setM) {
+    margin: $setM;
+}
+
+@mixin setPadding ($setP) {
+    padding: $setP;
+}
+
+@mixin bor ($bor) {
+    border: $bor;
+}
+
+@mixin borderR ($br) {
+    border-radius: $br;
+}
+
+@mixin position ($pos) {
+    position: $pos;
+}
+
+@mixin way ($top, $right, $bottom, $left) {
+    top: $top;
+    right: $right;
+    bottom: $bottom;
+    left: $left;
+}
+
+@font-face {
+    font-family: Closer;
+    // font-family: MINT TYPE - CLOSER-BOLD;
+    src: url(../materials/MINT_TYPE_CLOSER_BOLD.OTF);
+}
+
+@font-face {
+    font-family: Closer;
+    /*font-family: MINT TYPE - CLOSER-REGULAR;*/
+    src: url(../materials/MINT_TYPE_CLOSER_REGULAR.OTF);
+}
+
+@font-face {
+    font-family: "Closer SemBd";
+    /*font-family: MINT TYPE - CLOSER-SEMIBOLD;*/
+    src: url(../materials/MINT_TYPE_CLOSER_SEMIBOLD.OTF);
+}

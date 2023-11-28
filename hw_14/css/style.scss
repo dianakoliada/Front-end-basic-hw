@@ -1,0 +1,277 @@
+@import "mixin";
+
+$mainColor: #5094f2;
+$primaryColor: #d94748;
+$secondaryColor: #ebbb11;
+$textColor: #909090;
+$titleColor: #6c6c6c;
+$nameColor: #6f7173;
+$blockColor: #ffffff;
+$size: 1%;
+$sizeFigure: 20px;
+$mainSize: 1rem;
+
+.wrapper {
+    font-family: 'Hind Siliguri', sans-serif;
+
+    .header {
+        @include setPosition (flex, row, center, center);
+        padding: $size;
+        
+        .header__block {
+            @include setPosition (flex, row, space-between, center);
+            width: $size + 79;
+                
+                .header__block--flex {
+                    @include setPosition (flex, row, flex-start, center);
+                    width: $size + 29;
+                    
+                    .header__logo {
+                        width: $sizeFigure + 24;
+                        height: $sizeFigure + 24;
+                        background-color: $mainColor;
+                        border-radius: $size + 49;
+                        position: relative;
+                        transition: all 2s;
+
+                            &:hover {
+                                cursor: pointer;
+                                transform: scale(0.8);
+                                transition: all 2s;
+                            }
+
+                        .header__pic {
+                            position: absolute;
+                            top: $size +24;
+                            left: $size +24;
+                        }
+                    }
+
+                    .header__title {
+                        font-size: $mainSize + 2;
+                        line-height: $sizeFigure - 15;
+                        padding-left: $size + 2.5;
+                    }
+                }
+
+                .header__block--inner {
+                    width: $size + 29;
+                    
+                    .nav__list {
+                        @include setPosition (flex, row, space-between, center);
+
+                        .nav__link--active {
+                            @include decorateTitle ($mainSize + 0.46, $sizeFigure -12, $titleColor, start);
+                            text-decoration: none;  
+                        }
+                        
+                        .nav__link {
+                            @include decorateTitle ($mainSize + 0.46, $sizeFigure -12, $titleColor, start);
+                            text-decoration: none;
+                            transition: all 1.5s;
+                            
+                            &:hover {
+                                cursor: pointer;
+                                text-decoration: underline;
+                                text-underline-offset: $sizeFigure +13;
+                                color: $mainColor;
+                                transition: all 1.5s;
+                            }
+                        }
+                    }
+                }
+        }
+    }
+    
+
+    .main {
+
+        .container--primary {
+            @include setPosition (flex, row, center, center);
+            background: url(../imgs/background.png);
+            background-size: cover;
+            
+            .main__block {
+                @include setPosition (flex, row, space-between, center);
+                width: $size + 79;
+                padding-top: $size +1;
+                padding-left: $size /2;
+                padding-bottom: $size;
+
+                    #picture__item {
+                        transition: all 1.5s;
+                        
+                        &:hover {
+                            transform: rotateZ(30deg);
+                            transition: all 1.5s;
+                        }
+                    }
+                
+                .main__block--secondary {
+                    width: $size +65;
+                    display: flex;
+                    flex-direction: column;
+
+                    .main__title {
+                        @include decorateTitle ($mainSize + 2.2, $sizeFigure +24, $blockColor, start);
+                    }
+
+                    .main__title--secondary {
+                        @include decorateTitle ($mainSize + 0.89, $sizeFigure +24, $blockColor, start);
+                    }
+
+                    .main__btn {
+                        @include setPosition (flex, row, center, center);
+                        width: $sizeFigure +160;
+                        background-color: $mainColor;
+                        margin-left: $size;
+                        margin-top: $size +1;
+                        border-radius: 8px;
+                        transition: all 2s;
+
+                        &:hover {
+                            transform: scale(1.1);
+                            cursor: pointer;
+                            border: 2px solid black;
+                            transition: all 2s;
+                        }
+
+                        .btn__title {
+                            @include decorateTitle ($mainSize + 0.6, $sizeFigure +24, $blockColor, start);
+                            margin-left: $size;
+                        }
+                    }
+                }
+            }
+        }
+
+        .container--special {
+            @include setPosition (flex, row, baseline, flex-start);
+            margin-top: $size +2;
+            
+            .block__item {
+                width: $size +79;
+            }
+
+            .block__item--primary,
+            .block__item--secondary,
+            .block__item--special {
+                @include setPosition (flex, column, center, center);
+
+                .circle__primary {
+                    @include createPic ($mainColor, $sizeFigure +166, $sizeFigure +166, $size +49, relative);
+                    transition: all 2s;
+
+                    &:hover {
+                        transform: scale(1.1);
+                        cursor: pointer;
+                        box-shadow: 4px 4px 4px $nameColor;
+                        transition: all 2s;
+                    }
+
+                    .primary__pic {
+                        @include positionIcon (absolute, $size +19, $size +30); 
+                    }
+                }
+
+                .special__text {
+                    @include decorateTitle ($mainSize + 0.45, $sizeFigure +24, $mainColor, start);
+                    margin-top: $size +1;
+                    transition: all 3s;
+
+                    &:hover {
+                        text-decoration: underline;
+                        cursor: pointer;
+                        color: $nameColor;
+                        transition: all 3s;
+                    }
+                }
+
+                .special__title {
+                    @include decorateTitle ($mainSize + 0.1, $sizeFigure, $textColor, center);
+                    width: $size *50;
+                }
+
+                .circle__secondary {
+                    @include createPic ($primaryColor, $sizeFigure +166, $sizeFigure +166, $size +49, relative);
+                    transition: all 2s;
+
+                    &:hover {
+                        transform: scale(1.1);
+                        cursor: pointer;
+                        box-shadow: 4px 4px 4px $nameColor;
+                        transition: all 2s;
+                    }
+
+                    .primary__pic--secondary {
+                        @include positionIcon (absolute, $size +26, $size +24);
+                    }
+                }
+
+                .circle__special {
+                    @include createPic ($secondaryColor, $sizeFigure +166, $sizeFigure +166, $size +49, relative);
+                    transition: all 2s;
+
+                    &:hover {
+                        transform: scale(1.1);
+                        cursor: pointer;
+                        box-shadow: 4px 4px 4px $nameColor;
+                        transition: all 2s;
+                    }
+
+                    .primary__pic--third {
+                        @include positionIcon (absolute, $size +24, $size +24);
+                    }
+                }
+            }
+        }
+
+        .container--additional {
+            @include setPosition (flex, row, center, center);
+            margin-top: $size +2;
+            
+            .block__item--additional {
+                @include setPosition (flex, row, space-between, center);
+                width: $size +79;
+
+                .additional__title {
+                    @include decorateTitle ($mainSize +2.03, $sizeFigure +24, $nameColor, center);
+                    transition: all 4s;
+                    
+                    &:hover {
+                        transform: scale(0.5);
+                        cursor: pointer;
+                        transition: all 4s;
+                    }
+
+                    #text {
+                        display: block;
+                        margin-bottom: $size * 11;
+                    }
+                }
+
+                .additional__side {
+                    @include decorateTitle ($mainSize +0.89, $sizeFigure +24, $nameColor, left);
+                    width: 40%;
+
+                    .additional__text,
+                    .footer__title {
+                        @include decorateTitle ($mainSize +0.1, $sizeFigure +16, $textColor, left);
+                        padding-top: $size +1;
+                    }
+                }
+            }
+        }
+    }
+
+    .footer {
+        border-top: 1px solid $textColor;
+        margin-top: $size +1;
+        
+        .footer__item {
+            text-align: center;
+            padding: $size +1.5;
+            color: $textColor;
+        }
+    }           
+}

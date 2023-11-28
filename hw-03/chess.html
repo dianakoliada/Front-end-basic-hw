@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chess</title>
+    <style>
+
+        /* опредиляю размер доски и делю ее на ячейки */
+        .line {
+            border: 1px solid black;
+            width: 1020px;
+        }
+
+        /* возвращаю в поток line__item, после использования float:left */
+        .line:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        /* задаю направление ячейкам, чтобы получить нужную форму доски и центрирую */
+        .line__item {
+            float: left;
+            width: 100px;
+            height: 100px;
+            background: black;
+            border: 1px solid black;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+
+        }
+
+        /* отделяю крайние ячейки для отдельной стилизации */
+        .line:nth-child(even) .line__item:nth-child(even), 
+        .line:nth-child(odd) .line__item:nth-child(odd) {
+            background: antiquewhite;
+        }
+
+        /* отделяю крайние ячейки для отдельной стилизации */
+        .line:nth-child(n) .line__item:first-child,
+        .line:nth-child(n) .line__item:last-child,
+        .line:nth-child(1) .line__item:nth-child(n), 
+        .line:nth-child(10) .line__item:nth-child(n) {
+            background: burlywood;
+            text-align: center;
+            font-size: 40px;
+            font-weight: bolder;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+        
+        /* задаю ширину и высоту картинкам фигур */
+        .img {
+            width: 75px;
+            height: 75px;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="line">
+            <div class="line__item"></div>
+            <div class="line__item">A</div>
+            <div class="line__item">B</div>
+            <div class="line__item">C</div>
+            <div class="line__item">D</div>
+            <div class="line__item">E</div>
+            <div class="line__item">F</div>
+            <div class="line__item">G</div>
+            <div class="line__item">H</div>
+            <div class="line__item"></div>
+        </div>
+        <div class="line">
+            <div class="line__item">8</div>
+            <div class="line__item">
+                <img class="img" src="imgs/wh_ladia.png" alt="imd_wh_ladia">
+            </div>
+            <div class="line__item">
+                <img class="img" src="imgs/wh_kon.png" alt="img_wh_kon">
+            </div>
+            <div class="line__item">
+                <img class="img" src="imgs/wh_slon.png" alt="img_wh_slon">
+            </div>
+            <div class="line__item">
+                <img class="img" src="imgs/wh_korol.png" alt="img_wh_korol">
+            </div>
+            <div class="line__item">
+                <img class="img" src="imgs/wh_ferz.png" alt="img_wh_ferz">
+            </div>
+            <div class="line__item">
+                <img class="img" src="imgs/wh_slon.png" alt="img_wh_slon">
+            </div>
+            <div class="line__item">
+                <img class="img" src="imgs/wh_kon.png" alt="img_wh_kon">
+            </div>
+            <div class="line__item">
+                <img class="img" src="imgs/wh_ladia.png" alt="img_wh_ladia">
+            </div>
+            <div class="line__item">8</div>
+        </div>
+        <div class="line">
+            <div class="line__item">7</div>
+            <div class="line__item">
+                <img class="img" src="imgs/wh_peshka.png" alt="img_wh_peshka">
+            </div>
+            <div class="line__item">
+                <img class="img" src="imgs/wh_peshka.png" alt="img_wh_peshka">
+            </div>
+            <div class="line__item">
+                <img class="img" src="imgs/wh_peshka.png" alt="img_wh_peshka">
+            </div>
+            <div class="line__item">
+                <img class="img" src="imgs/wh_peshka.png" alt="img_wh_peshka">
+            </div>
+            <div class="line__item">
+                <img class="img" src="imgs/wh_peshka.png" alt="img_wh_peshka">
+            </div>
+            <div class="line__item">
+                <img class="img" src="imgs/wh_peshka.png" alt="img_wh_peshka">
+            </div>
+            <div class="line__item">
+                <img class="img" src="imgs/wh_peshka.png" alt="img_wh_peshka">
+            </div>
+            <div class="line__item">
+                <img class="img" src="imgs/wh_peshka.png" alt="img_wh_peshka">
+            </div>
+            <div class="line__item">7</div>
+        </div>
+        <div class="line">
+            <div class="line__item">6</div>
+            <div class="line__item"></div>
+            <div class="line__item"></div>
+            <div class="line__item"></div>
+            <div class="line__item"></div>
+            <div class="line__item"></div>
+            <div class="line__item"></div>
+            <div class="line__item"></div>
+            <div class="line__item"></div>
+            <div class="line__item">6</div>
+        </div>
+        <div class="line">
+            <div class="line__item">5</div>
+            <div class="line__item"></div>
+            <div class="line__item"></div>
+            <div class="line__item"></div>
+            <div class="line__item"></div>
+            <div class="line__item"></div>
+            <div class="line__item"></div>
+            <div class="line__item"></div>
+            <div class="line__item"></div>
+            <div class="line__item">5</div>
+        </div>
+        <div class="line">
+            <div class="line__item">4</div>
+            <div class="line__item"></div>
+            <div class="line__item"></div>
+            <div class="line__item"></div>
+            <div class="line__item"></div>
+            <div class="line__item"></div>
+            <div class="line__item"></div>
+            <div class="line__item"></div>
+            <div class="line__item"></div>
+            <div class="line__item">4</div>
+        </div>
+        <div class="line">
+            <div class="line__item">3</div>
+            <div class="line__item"></div>
+            <div class="line__item"></div>
+            <div class="line__item"></div>
+            <div class="line__item"></div>
+            <div class="line__item"></div>
+            <div class="line__item"></div>
+            <div class="line__item"></div>
+            <div class="line__item"></div>
+            <div class="line__item">3</div>
+        </div>
+        <div class="line">
+            <div class="line__item">2</div>
+            <div class="line__item">
+                <img class="img" src="imgs/bl_peshka.png" alt="img_bl_peshka">
+            </div>
+            <div class="line__item">
+                <img class="img" src="imgs/bl_peshka.png" alt="img_bl_peshka">
+            </div>
+            <div class="line__item">
+                <img class="img" src="imgs/bl_peshka.png" alt="img_bl_peshka">
+            </div>
+            <div class="line__item">
+                <img class="img" src="imgs/bl_peshka.png" alt="img_bl_peshka">
+            </div>
+            <div class="line__item">
+                <img class="img" src="imgs/bl_peshka.png" alt="img_bl_peshka">
+            </div>
+            <div class="line__item">
+                <img class="img" src="imgs/bl_peshka.png" alt="img_bl_peshka">
+            </div>
+            <div class="line__item">
+                <img class="img" src="imgs/bl_peshka.png" alt="img_bl_peshka">
+            </div>
+            <div class="line__item">
+                <img class="img" src="imgs/bl_peshka.png" alt="img_bl_peshka">
+            </div>
+            <div class="line__item">2</div>
+        </div>
+        <div class="line">
+            <div class="line__item">1</div>
+            <div class="line__item">
+                <img class="img" src="imgs/bl_ladia.png" alt="img_bl_ladia">
+            </div>
+            <div class="line__item">
+                <img class="img" src="imgs/bl_kon.png" alt="img_bl_kon">
+            </div>
+            <div class="line__item">
+                <img class="img" src="imgs/bl_slon.png" alt="img_bl_slon">
+            </div>
+            <div class="line__item">
+                <img class="img" src="imgs/bl_korol.png" alt="img_bl_korol">
+            </div>
+            <div class="line__item">
+                <img class="img" src="imgs/bl_ferz.png" alt="img_bl_ferz">
+            </div>
+            <div class="line__item">
+                <img class="img" src="imgs/bl_slon.png" alt="img_bl_slon">
+            </div>
+            <div class="line__item">
+                <img class="img" src="imgs/bl_kon.png" alt="img_bl_kon">
+            </div>
+            <div class="line__item">
+                <img class="img" src="imgs/bl_ladia.png" alt="img_bl_ladia">
+            </div>
+            <div class="line__item">1</div>
+        </div>
+        <div class="line">
+            <div class="line__item"></div>
+            <div class="line__item">A</div>
+            <div class="line__item">B</div>
+            <div class="line__item">C</div>
+            <div class="line__item">D</div>
+            <div class="line__item">E</div>
+            <div class="line__item">F</div>
+            <div class="line__item">G</div>
+            <div class="line__item">H</div>
+            <div class="line__item"></div>
+        </div>
+    </div>
+</body>
+</html>

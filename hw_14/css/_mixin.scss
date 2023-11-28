@@ -1,0 +1,28 @@
+@mixin setPosition ($dispFlx, $flxDir, $jc, $alignItem) {
+    display: $dispFlx;
+    flex-direction: $flxDir;
+    justify-content: $jc;
+    align-items: $alignItem;
+}
+
+@mixin createPic ($bgc, $wid, $heig, $borRad, $posit) {
+    background-color: $bgc;
+    width: $wid;
+    height: $heig;
+    border-radius: $borRad;
+    position: $posit;
+}
+
+@mixin positionIcon ($posit, $top, $left) {
+    position: $posit;
+    top: $top;
+    left: $left;
+}
+
+@mixin decorateTitle ($fonSiz, $linHeig, $color, $textAlig) {
+    font-size: $fonSiz;
+    line-height: $linHeig;
+    color: $color;
+    text-align: $textAlig;
+}
+

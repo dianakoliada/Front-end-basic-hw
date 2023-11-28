@@ -1,0 +1,163 @@
+* {
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    border: 0;
+    box-sizing: border-box; /*обнуляю базовые стили браузеров*/
+}
+
+html {
+    font-size: 16px; /*задаю документу 1rem=16px*/
+}
+
+body {
+    font-size: 1rem; /*задаю документу 1rem=16px*/
+    line-height: 1; /*убираю базовый межстрочный интервал в браузере*/
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /*задаю стиль шрифта для всего документа*/
+}
+
+a {
+    text-decoration: none; /*убираю подчеркивание для ссылок*/
+}
+
+ul,ol {
+    list-style: none; /*убираю маркировку у списка*/
+}
+
+.header {
+    position: fixed; /*зафиксировала*/
+    width: 100%; /*задаю ширину*/
+}
+
+.header_part {
+    display: flex; /*по умолчанию блоки становяться в ряд*/
+    justify-content: space-between; /*задаю расположение блокам*/
+    background-color: #fff; /*задала фон для 1й части хедера*/
+}
+
+[class*="link"] {
+    color: rgb(1, 72, 72); /*задала цвет шрифту в верхней части хедера*/
+    transition: all 2s; /*для того чтоб цвет менялся плавно*/
+    font-family: 'Chakra Petch', sans-serif; /*задаю стиль шрифта для h2*/
+    font-family: 'Dancing Script', cursive; /*задаю стиль шрифта для h2*/
+    font-size: 3rem; /*задаю размер шрифта для h2*/
+}
+
+.header_logo {
+    width: 30%; /*задаю ширину блоку*/
+    padding: 1%; /*задаю внутренний отступ для лого*/
+    font-size: 1.5rem; /*задаю размер шрифта*/
+}
+
+.nav {
+    width: 25%; /*задаю ширину блоку*/
+    padding: 1%; /*задаю внутренний отступ для nav*/
+    font-size: 1.3rem; /*задаю размер шрифта*/
+}
+
+.nav_item {
+    display: inline; /*расположила айтемы в ряд*/
+    padding-right: 7%; /*задала отступ между айтемами*/
+}
+
+.menu,
+.footer {
+    background-color: rgb(1, 72, 72); /*задала фон для 2й части хедера*/
+}
+
+.menu_secondary {
+    padding: 2%; /*задаю высоту блоку*/
+    background-color: rgb(1, 72, 72); /*задала фон для 2й части хедера*/
+}
+
+.menu_form {
+    display: flex; /*по умолчанию блоки становяться в ряд*/
+    justify-content: space-around; /*задаю расположение блокам*/
+    padding: 2%; /*задаю высоту блоку*/
+    color: white; /*задала цвет шрифту во второй части хедера*/
+}
+
+.form_text {
+    border: 5px solid white; /*задала границы форме (инпут)*/
+    border-radius: 8px; /*саму форму сделала плавной*/
+}
+
+.form_text--btn {
+    border: 5px solid white; /*задала границы форме (инпут)*/
+    border-radius: 10px 30px; /*саму форму сделала плавной*/
+    padding: 30%; /*задала внутренние отступы для увеличения инпута*/
+    transition: all 2s; /*при наведении мышки плавно меняятся цвет обратно*/
+}
+
+.form_text--btn:hover {
+    background-color: rgb(1, 72, 72); /*при наведении мышки меняятся цвет фона*/
+    color: white; /*при наведении мышки меняятся цвет шрифта*/
+    transition: all 2s; /*для плавности*/
+    border: 8px solid white; /*задала границы форме (инпут)*/
+}
+
+.main {
+    padding-top: 270px; /*чтоб main не пряталось в header при использовании его в position fixed*/
+    width: 70%; /*задала ширину основному контенту*/
+    margin: 0 auto; /*разместила контент посередине блока*/
+}
+
+.main_secondary {
+    background-image: url(../imgs/bgi_gr_brit.jpg); /*задала фон для второй страницы*/
+    background-size: 100% 100%; /*задала размер фона*/
+}
+
+div>h2,
+li>a {
+    font-family: 'Chakra Petch', sans-serif; /*задаю стиль шрифта*/
+    font-family: 'Dancing Script', cursive; /*задаю стиль шрифта*/
+    font-size: 1.8rem; /*задаю размер шрифта*/
+}
+
+[class$="title"] {
+    padding: 2%; /*задаю отступы для названий*/
+    color: rgb(1, 72, 72); /*задаю цвет для названий*/
+    text-align: center; /*задаю позиционирование*/
+}
+
+[class*="link"]:hover,
+[class$="title"]:hover {
+    cursor: pointer; /*принаведении курсор становится пальчиком*/
+    color: fuchsia; /*при наведении текст меняет цвет*/
+    transition: all 2s; /*для того чтоб цвет менялся плавно обратно*/
+}
+
+img {
+    width: 90%; /*задала ширину картинкам*/
+    border-radius: 17px; /*закруглила края картинок*/
+    transition: all 4s; /*картинка уменьшается плавно*/
+}
+
+img:hover {
+    width: 100%; /*при наведении мышки картинка увеличивается*/
+    transition: all 4s; /*плавное увеличение картинки*/
+}
+
+.info {
+    padding: 1% 1% 0; /*задаю отступы для menu about us*/
+}
+
+.info_text {
+    font-size: 1.2rem; /*задаю размер шрифта текста*/
+    padding: 3%; /*задаю отступы для текста*/
+    line-height: 33px; /*задаю высоту строк*/
+    text-indent: 25px; /*добавила абзац*/
+}
+
+.footer_info {
+    color: white; /*задала цвет шрифтa футера*/
+    padding: 1%; /*задаю отступы для текста*/
+    font-size: 1.2rem; /*задаю размер шрифта текста*/
+}
+
+.footer_item {
+    display: block; /*делаю строчный элемент блочным*/
+    text-align: center; /*размещаю текст посредине*/
+    font-size: 1.2rem; /*задаю размер шрифта текста*/
+    padding-bottom: 0.5%; /*задаю внутренний отступ*/
+}

@@ -1,0 +1,243 @@
+@import "tools";
+@import "reset";
+
+@media screen and (min-width: 378px) and (max-width: 567px) {
+    .header {
+
+        .navbar {
+    
+            .container {
+                // @include setPadding(0);
+
+                .d-flex {
+                    @include setFlex(flex, column, center, space-between);
+                }
+    
+                .collapse {
+    
+                    .navbar-nav {
+                        @include setPadding(0 0 0 50px);
+    
+                        .nav-item {
+    
+                            .nav-link {
+                                @include setPadding(0 10px);
+                                transition: 0.5s ease-out;
+    
+                                &:hover {
+                                    color: $primaryColor;
+                                }
+                            }
+                        }
+                    }
+    
+                    .d-flex {
+    
+                        .form-control {
+                            @include borderR(50px);
+                            @include Bor(0);
+                            @include setPadding(10px 0 10px 20px);
+                        }
+    
+                        .btn {
+                            @include setMargin(10px 0);
+                            @include borderR(50px);
+                            @include Bor(2px solid $primaryColor);
+                            width: $sizePercent;
+                            transition: 0.5s ease-out;
+                            color: $secondaryColor;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 576px) and (max-width: 767px) {
+    .header {
+
+        .navbar {
+    
+            .container {
+                @include setPadding(0);
+    
+                .collapse {
+    
+                    .navbar-nav {
+                        @include setPadding(0 0 0 50px);
+    
+                        .nav-item {
+    
+                            .nav-link {
+                                transition: 0.5s ease-out;
+    
+                                &:hover {
+                                    color: $primaryColor;
+                                }
+                            }
+                        }
+                    }
+    
+                    .d-flex {
+    
+                        .form-control {
+                            @include borderR(50px);
+                            @include Bor(0);
+                            @include setPadding(0 0 0 20px);
+                        }
+    
+                        .btn {
+                            @include borderR(50px);
+                            @include Bor(2px solid $primaryColor);
+                            width: $sizePercent/3;
+                            transition: 0.5s ease-out;
+                            color: $secondaryColor;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 991px) {
+    .header {
+
+    .navbar {
+
+        .container {
+            @include setPadding(0);
+
+            .collapse {
+
+                .navbar-nav {
+                    @include setPadding(0 0 0 50px);
+
+                    .nav-item {
+
+                        .nav-link {
+                            transition: 0.5s ease-out;
+
+                            &:hover {
+                                color: $primaryColor;
+                            }
+                        }
+                    }
+                }
+
+                .d-flex {
+
+                    .form-control {
+                        @include borderR(50px);
+                        @include Bor(0);
+                        @include setPadding(0 0 0 20px);
+                    }
+
+                    .btn {
+                        @include borderR(50px);
+                        @include Bor(2px solid $primaryColor);
+                        width: $sizePercent/3;
+                        transition: 0.5s ease-out;
+                        color: $secondaryColor;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 992px) and (max-width: 1399px) {
+    .header {
+
+    .navbar {
+
+        .container {
+            @include setPadding(0);
+
+            .collapse {
+
+                .navbar-nav {
+                    @include setPadding(0 0 0 50px);
+
+                    .nav-item {
+
+                        .nav-link {
+                            transition: 0.5s ease-out;
+
+                            &:hover {
+                                color: $primaryColor;
+                            }
+                        }
+                    }
+                }
+
+                .d-flex {
+
+                    .form-control {
+                        @include borderR(50px);
+                        @include Bor(0);
+                        @include setPadding(0 0 0 20px);
+                    }
+
+                    .btn {
+                        @include borderR(50px);
+                        @include Bor(2px solid $primaryColor);
+                        width: $sizePercent/3;
+                        transition: 0.5s ease-out;
+                        color: $secondaryColor;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1400px) and (max-width: 1920px) {
+    .header {
+
+        .navbar {
+
+            .container {
+                @include setPadding(0);
+
+                .collapse {
+
+                    .navbar-nav {
+                        @include setPadding(0 0 0 50px);
+
+                        .nav-item {
+
+                            .nav-link {
+                                transition: 0.8s ease-out;
+
+                                &:hover {
+                                    color: $primaryColor;
+                                }
+                            }
+                        }
+                    }
+
+                    .d-flex {
+
+                        .form-control {
+                            @include borderR(50px);
+                            @include Bor(0);
+                            @include setPadding(0 0 0 20px);
+                        }
+
+                        .btn {
+                            @include borderR(50px);
+                            @include Bor(2px solid $primaryColor);
+                            width: $sizePercent/3;
+                            transition: 0.5s ease-out;
+                            color: $secondaryColor;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

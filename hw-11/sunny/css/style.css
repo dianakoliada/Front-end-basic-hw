@@ -1,0 +1,122 @@
+.container {
+    background: linear-gradient(178deg, #15B6E2 40%, #08CE3E 67%);
+    width: 98%; /*задаю ширину контейнеру где будет жить солнышко*/
+    height: 96vh; /*задаю высоту контейнеру*/
+    margin: 1%; /*задаю внешние отступы*/
+}
+
+.head {
+    top: 1%;
+    left: 40%;
+    width: 10%; /*задаю ширину солнышку*/
+    height: 170px; /*задаю высоту солнышку*/
+    border: 4px dotted yellow; /*задаю точечную акантовку*/
+    background: radial-gradient( #0BF7F2 27%, #F1ED24 67%, #F5F92C 100%); /*задаю цвет*/
+    border-radius: 50%; /*делаю солнышко круглым*/
+    position: relative; /*позиционирую глаз и зрачек относительно солнышка*/
+    animation-name: animation; /*задаю имя анимации для кейфрейма*/
+    animation-delay: 2s; /*отсрочка начала действия анимашки*/
+    animation-iteration-count: infinite; /*для повторения действия анимации*/
+    animation-timing-function: linear; /*динамика движения постоянная*/
+    animation-duration: 15s; /*длительность анимации*/
+    transition: all 2s; /*для плавности*/
+   
+}
+
+.head:hover {
+    cursor: pointer; /*при наведении на солнышко курсот становится пальчиком*/
+    transform: rotate(720deg); /*для вращения*/
+    transition: all 2s; /*для плавности*/
+}
+
+.left_eye {
+    background: radial-gradient( #3D8A8A 14%, rgba(128, 126, 134, 0.97) 79%); /*задаю цвет глазу*/
+    width: 10%; /*задаю ширину глазу*/
+    height: 40px; /*задаю высоту глазу*/
+    top: 40%; /*выставляю глаз относительно солнышка с отступом сверху*/
+    left: 40%; /*выставляю глаз относительно солнышка с отступом слева*/
+    transform: translate(-50%, -50%); /*всегда посередине солнышка*/
+    border-radius: 50%; /*закругляю глаз*/
+    position: absolute; /*абсолютно позиционирую относительно солнышка*/
+}
+
+.right_eye {
+    background: radial-gradient( #3D8A8A 14%, rgba(128, 126, 134, 0.97) 79%); /*задаю цвет глазу*/
+    width: 10%; /*задаю ширину глазу*/
+    height: 40px; /*задаю высоту глазу*/
+    top: 40%; /*выставляю глаз относительно солнышка с отступом сверху*/
+    left: 60%; /*выставляю глаз относительно солнышка с отступом слева*/
+    transform: translate(-50%, -50%); /*всегда посередине солнышка*/
+    border-radius: 50%; /*закругляю глаз*/
+    position: absolute; /*абсолютно позиционирую относительно солнышка*/
+}
+
+.pupil {
+    background-color: white; /*задаю цвет зрачку*/
+    width: 25%; /*задаю ширину зрачку*/
+    height: 15px; /*задаю высоту зрачку*/
+    top: 40%; /*выставляю зрачек относительно глаза с отступом сверху*/
+    left: 60%; /*выставляю зрачек относительно глаза с отступом сверху*/
+    transform: translate(-50%, -50%); /*всегда посередине глаза*/
+    border-radius: 50%; /*закругляю глаз*/
+    position: absolute; /*абсолютно позиционирую относительно солнышка*/
+}
+
+.mouth {
+    background-color: red; /*задаю цвет*/
+    width: 30px; /*задаю ширину*/
+    height: 30px; /*задаю высоту*/
+    top: 72%; /*выставляю относительно солнышка с отступом сверху*/
+    left: 50%; /*выставляю относительно солнышка с отступом сверху*/
+    transform: translate(-50%, -50%) rotate(-90deg); /*размещаю рот и задаю разворот для корректного отображения*/
+    border-radius: 150px 20px 20px 150px; /*задаю форму*/
+    border: 2px solid black; /*для контраста обвожу рот*/
+    position: absolute; /*абсолютно позиционирую относительно солнышка*/
+}
+
+@keyframes animation {
+        
+    from {
+        top: 1%;
+        left: 40%;
+    }
+    
+    20% {
+        top: 40%;
+        left: 88%;
+        transform: scale(1.5);
+        transition: all 2s;
+        
+    }
+    
+    40% {
+        top: 82%;
+        left: 40%;
+        border: 6px dotted rgb(31, 2, 117); 
+        transform: scale(1);
+        transition: all 2s;
+    }
+    
+    60% {
+        
+        top: 40%;
+        left: 3%;
+        border: 6px dotted aqua; 
+        transition: all 2s;
+    }
+
+    80% {
+        top: 5%;
+        left: 40%;
+        border: 4px dotted yellow; 
+        transform: skew(100deg, -50deg); 
+        transition: all 2s;
+    }
+
+    to {
+        top: 40%;
+        left: 40%;
+        transition: all 2s;
+    }
+    
+}
